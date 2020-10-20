@@ -7,6 +7,15 @@ class Book extends React.Component {
         this.state = { title: '', author: '', price: '', isbn: '', url: '', other: '', tags: '' };
         this.bookChange = this.bookChange.bind(this);
         this.submitBook = this.submitBook.bind(this);
+
+        this.initialState = {
+            title: '', author: '', price: '', isbn: '', url: '', other: '', tags: '' 
+        };
+        this.state = this.initialState;
+    }
+    onResetClick(event) {
+        event.preventDefault();
+        this.setState(this.initialState);
     }
     submitBook(event) {
         alert(
@@ -109,7 +118,7 @@ class Book extends React.Component {
 
                         </Card.Body>
                         <Card.Footer style={{ "text-align": "right" }}>
-                            <Button variant="danger" type="reset"> Cancel</Button>{" "}
+                            <Button variant="danger" type="reset" onClick={this.onResetClick.bind(this)} > Clear</Button>{" "}
                             <Button variant="success" type="submit"> Submit</Button>
                         </Card.Footer>
                     </Form>

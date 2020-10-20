@@ -1,19 +1,20 @@
 import React from 'react';
 import { Card, Container, Table } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faList } from '@fortawesome/free-solid-svg-icons'
 
 class BookList extends React.Component {
     render() {
 
         return (
             <Container>
-
+                <Card.Header><FontAwesomeIcon icon={faList} /> Book List </Card.Header>
                 <Card >
-                    <Card.Header>This is some text within a card body.</Card.Header>
                     <Card.Body>
-                        <Table striped bordered hover  size="sm">
+                        <Table striped bordered hover size="sm">
                             <thead ClassName="bg-dark">
                                 <tr>
-                                    
+
                                     <th>Book Name</th>
                                     <th>Book Author</th>
                                     <th>Price</th>
