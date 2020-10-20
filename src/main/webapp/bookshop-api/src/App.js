@@ -1,50 +1,33 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/navbar';
-import {Container, Row, Jumbotron, Col,Button} from 'react-bootstrap'
-
+import BodyHome from './components/bodyhome';
+import Footer from './components/footer';
+import Book from './components/book';
+import BookList from './components/booklist';
+import {Container, Row, Col} from 'react-bootstrap'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 function App() {
 const mTop={
-    marginTop:"20px",
-    marginLeft:"100px"
+    marginTop:"20px"
     }
   return (
-    <div className="App">
+    <Router>
     <NavBar/>
       <Container>
       <Row>
-      <Col sm={6} style={mTop}>
-      </Col>
+       <Col sm={6} style={mTop}></Col>
+      <Switch>
+        <Route path="/" exact component={BodyHome}/>
+        <Route path="/add" exact component={Book}/>
+        <Route path="/list" exact component={BookList}/>
+      </Switch>
 
-        <Jumbotron>
-                  <h1>Hello, world!</h1>
-                  <p>
-                    This is a simple hero unit, a simple jumbotron-style component for calling
-                    extra attention to featured content or information. content or information.
-                    content or information.
-                    <Button variant="link">Link</Button>
-                  </p>
-
-                </Jumbotron>
-
-      </Row>
-      <Row>
-            <Col sm={6} style={mTop}>
-            </Col>
-
-              <Jumbotron>
-                        <h1>Hello, world!</h1>
-                        <p>
-                          This is a simple hero unit, a simple jumbotron-style component for calling
-                          extra attention to featured content or information.content or information. content or information.
-                          <Button variant="link">Link</Button>
-                        </p>
-                      </Jumbotron>
-
-            </Row>
+             </Row>
       </Container>
-    </div>
+      <Footer/>
+    </Router>
   );
 }
 
