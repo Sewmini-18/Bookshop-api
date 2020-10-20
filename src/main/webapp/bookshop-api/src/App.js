@@ -14,10 +14,11 @@ const mTop={
     }
   return (
     <Router>
-    <NavBar/>
+      <NavBar/>
       <Container>
+      <Col sm={6} style={mTop}></Col>
       <Row>
-       <Col sm={6} style={mTop}></Col>
+       
       <Switch>
         <Route path="/" exact component={BodyHome}/>
         <Route path="/add" exact component={Book}/>
