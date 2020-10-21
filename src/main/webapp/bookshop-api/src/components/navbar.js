@@ -1,13 +1,15 @@
 import React from 'react';
-import {Navbar, Nav,Button, ButtonGroup, Col} from 'react-bootstrap'
+import {Navbar, Button, ButtonGroup, Col} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome} from '@fortawesome/free-solid-svg-icons'
 
 class NavBar extends React.Component{
 render(){
     return(
     <Navbar bg="primary" variant="dark">
     <Link to={""} className="navbar-brand">
-    <Col><Navbar.Brand  Active >Home</Navbar.Brand></Col>
+    <Col><Navbar.Brand  Active ><FontAwesomeIcon icon={faHome} className="fa-2x"/></Navbar.Brand></Col>
     </Link>
 
 <Navbar.Collapse className="justify-content-end">

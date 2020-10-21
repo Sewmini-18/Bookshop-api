@@ -1,5 +1,8 @@
 import React from 'react';
-import { Container, Card, Form, Col, Button, InputGroup, FormControl } from 'react-bootstrap'
+import ReactTooltip from 'react-tooltip';
+import { Container, Card, Form,Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBook,faDollarSign, faUserEdit,faBarcode,faFileImage, faTags, faInfoCircle,faBookOpen, faLocationArrow, faEraser } from '@fortawesome/free-solid-svg-icons'
 
 class Book extends React.Component {
     constructor(props) {
@@ -41,35 +44,36 @@ class Book extends React.Component {
         return (
             <Container>
                 <Card>
-                    <Card.Header>Add Book</Card.Header>
+                    <Card.Header> &nbsp; &nbsp;<FontAwesomeIcon icon={faBookOpen} /> &nbsp;&nbsp;Add Book</Card.Header>
                     <Form onSubmit={this.submitBook} id="BookFormId" >
                         <Card.Body>
-
+                        <ReactTooltip />
                             <Form.Row>
                                 <Form.Group as={Col} controlId="formGridTitle">
                                     <InputGroup className="mb-2">
-                                        <InputGroup.Prepend>
-                                            <InputGroup.Text>Title</InputGroup.Text>
+                                        <InputGroup.Prepend column xs={7}>
+                                            <InputGroup.Text ><FontAwesomeIcon icon={faBook} /></InputGroup.Text>
                                         </InputGroup.Prepend>
-                                        <FormControl type="test" name="title" value={this.state.title} onChange={this.bookChange} placeholder="Book name" required />
+                                        <FormControl  type="test" name="title" value={this.state.title} onChange={this.bookChange} placeholder="Book name" required />
                                     </InputGroup>
                                 </Form.Group>
 
                                 <Form.Group as={Col} controlId="formGridAuthor">
                                     <InputGroup className="mb-2">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text>Author</InputGroup.Text>
+                                            <InputGroup.Text ><FontAwesomeIcon icon={faUserEdit} /></InputGroup.Text>
                                         </InputGroup.Prepend>
-                                        <FormControl type="test" name="author" value={this.state.author} onChange={this.bookChange} placeholder="Author name" required />
+                                        <FormControl type="test"  name="author" value={this.state.author} onChange={this.bookChange} placeholder="Author name" required />
                                     </InputGroup>
                                 </Form.Group>
+                                
                             </Form.Row>
-
+                            
                             <Form.Row>
                                 <Form.Group as={Col} controlId="formGridPrice">
                                     <InputGroup className="mb-2">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text>Price</InputGroup.Text>
+                                            <InputGroup.Text><FontAwesomeIcon icon={faDollarSign} /></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <FormControl type="test" name="price" value={this.state.price} onChange={this.bookChange} placeholder="Price" />
                                     </InputGroup>
@@ -78,7 +82,7 @@ class Book extends React.Component {
                                 <Form.Group as={Col} controlId="formGridIsbn">
                                     <InputGroup className="mb-2">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text>ISBN No</InputGroup.Text>
+                                            <InputGroup.Text><FontAwesomeIcon icon={faBarcode} /></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <FormControl type="test" name="isbn" value={this.state.isbn} onChange={this.bookChange} placeholder="ISBN Number" required />
                                     </InputGroup>
@@ -88,7 +92,7 @@ class Book extends React.Component {
                                 <Form.Group as={Col} controlId="formGridUrl">
                                     <InputGroup className="mb-2">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text>Cover Photo URL</InputGroup.Text>
+                                            <InputGroup.Text><FontAwesomeIcon icon={faFileImage} /></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <FormControl type="test" name="url" value={this.state.url} onChange={this.bookChange} placeholder="url of cover photo" />
                                     </InputGroup>
@@ -97,7 +101,7 @@ class Book extends React.Component {
                                 <Form.Group as={Col} controlId="formGridOther">
                                     <InputGroup className="mb-2">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text>Other Info</InputGroup.Text>
+                                            <InputGroup.Text><FontAwesomeIcon icon={faInfoCircle} /></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <FormControl type="test" name="other" value={this.state.other} onChange={this.bookChange} placeholder="Other information" />
                                     </InputGroup>
@@ -107,7 +111,7 @@ class Book extends React.Component {
                                 <Form.Group as={Col} controlId="formGridTags">
                                     <InputGroup className="mb-2">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text>Tags</InputGroup.Text>
+                                            <InputGroup.Text><FontAwesomeIcon icon={faTags} /></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <FormControl name="tags" type="test" value={this.state.tags} onChange={this.bookChange} placeholder="tags ( Eg: fantacy, novel, kids, biography etc. )" />
                                     </InputGroup>
@@ -118,8 +122,8 @@ class Book extends React.Component {
 
                         </Card.Body>
                         <Card.Footer style={{ "text-align": "right" }}>
-                            <Button variant="danger" type="reset" onClick={this.onResetClick.bind(this)} > Clear</Button>{" "}
-                            <Button variant="success" type="submit"> Submit</Button>
+                            <Button variant="danger" type="reset" onClick={this.onResetClick.bind(this)} > &nbsp; Clear <FontAwesomeIcon icon={faEraser} /></Button>{" "}
+                            <Button variant="success" type="submit"> Submit <FontAwesomeIcon icon={faLocationArrow} /></Button>
                         </Card.Footer>
                     </Form>
                 </Card>

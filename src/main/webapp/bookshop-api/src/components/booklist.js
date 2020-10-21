@@ -12,7 +12,7 @@ class BookList extends React.Component {
                 <Card >
                     <Card.Body>
                         <Table striped bordered hover size="sm">
-                            <thead ClassName="bg-dark">
+                            <thead class="table-primary">
                                 <tr>
 
                                     <th>Book Name</th>
