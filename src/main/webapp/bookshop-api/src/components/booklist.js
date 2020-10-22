@@ -13,7 +13,7 @@ class BookList extends React.Component {
         }
     }
     componentDidMount(){
-        axios.get("http://localhost:8081/rest/books")
+        axios.get("http://localhost:8081/list/books")
         .then(response=>response.data)
         .then((data)=>{this.setState({books:data});
         });

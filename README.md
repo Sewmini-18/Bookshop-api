@@ -13,6 +13,7 @@
 # DELETE
 	http://localhost:8081/list/books/100
 
+<<<<<<< HEAD
 # Requests
 Example:
 	{
@@ -25,3 +26,8 @@ Example:
 		"info": "published in 2014 Sep"
 	}
 	
+=======
+
+
+	
+>>>>>>> 2c8868ade56d00c517ed249b9c4cba9029feed2b
