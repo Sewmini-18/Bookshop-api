@@ -26,7 +26,8 @@ public class Application implements CommandLineRunner {
 		book.setCoverPhotoURL("https://images-na.ssl-images-amazon.com/images/I/417zLTa1uqL._SX397_BO1,204,203,200_.jpg");
 		book.setIsbnNumber(1617293989L);
 		book.setPrice(2776.00);
-		book.setLanguage("English");
+		book.setTags("English, Novel");
+		book.setInfo("this is a book published in 2014");
 		service.saveOrUpdate(book);
 	}
 

@@ -28,7 +28,10 @@ public class Book {
 	private Double price;
 	
 	@NotNull
-	private String language;
+	private String tags;
+
+	@NotNull
+	private String info;
 
 	public Long getId() {
 		return id;
@@ -78,12 +81,19 @@ public class Book {
 		this.price = price;
 	}
 
-	public String getLanguage() {
-		return language;
+	public String getTags() {
+		return tags;
 	}
 
-	public void setLanguage(String language) {
-		this.language = language;
+	public void setTags(String tags) {
+		this.tags = tags;
+	}
+	public String getInfo() {
+		return info;
+	}
+
+	public void setInfo(String info) {
+		this.info = info;
 	}
 
 }
