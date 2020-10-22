@@ -9,7 +9,7 @@ render(){
     return(
     <Navbar bg="primary" variant="dark">
     <Link to={""} className="navbar-brand">
-    <Col><Navbar.Brand  Active ><FontAwesomeIcon icon={faHome} className="fa-2x"/></Navbar.Brand></Col>
+    <Col><Navbar.Brand  active="true" ><FontAwesomeIcon icon={faHome} className="fa-2x"/></Navbar.Brand></Col>
     </Link>
 
 <Navbar.Collapse className="justify-content-end">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Jumbotron, Button } from 'react-bootstrap'
+import { Row,  Jumbotron, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar } from '@fortawesome/free-solid-svg-icons'
 
@@ -25,9 +25,9 @@ class BodyHome extends React.Component {
             <Row>
                 <Jumbotron>
                     <h1>
-                            <span class="fa-layers fa-fw" >
+                            <span className="fa-layers fa-fw" >
                             <FontAwesomeIcon icon={faCalendar} transform="grow-2 right-0 up-2" />
-                            <span  class="fa-layers-text fa-inverse" transform="shrink-10 down-40" style={txt}>
+                            <span  className="fa-layers-text fa-inverse" transform="shrink-10 down-40" style={txt}>
                             {this.state.currentDate}
                             </span>
                         </span>&nbsp;

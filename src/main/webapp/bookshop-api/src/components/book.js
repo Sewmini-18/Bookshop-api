@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
-import { Container, Card, Form,Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap'
+import { Container, Card, Form, Col, Button, InputGroup, FormControl } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBook,faDollarSign, faUserEdit,faBarcode,faFileImage, faTags, faInfoCircle,faBookOpen, faLocationArrow, faEraser } from '@fortawesome/free-solid-svg-icons'
 
@@ -44,7 +44,7 @@ class Book extends React.Component {
         return (
             <Container>
                 <Card>
-                    <Card.Header> &nbsp; &nbsp;<FontAwesomeIcon icon={faBookOpen} /> &nbsp;&nbsp;Add Book</Card.Header>
+                    <Card.Header> &nbsp; &nbsp;<FontAwesomeIcon icon={faBookOpen} /> &nbsp;&nbsp;<b>Add Book</b></Card.Header>
                     <Form onSubmit={this.submitBook} id="BookFormId" >
                         <Card.Body>
                         <ReactTooltip />
